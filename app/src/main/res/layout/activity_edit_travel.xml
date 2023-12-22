@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTravelActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/editHeaderBg"
+            android:layout_width="match_parent"
+            android:layout_height="125sp"
+            android:background="@color/green"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/headerUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25sp"
+            android:layout_marginLeft="25sp"
+            android:layout_marginTop="25sp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Dashboard Admin"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/baseline_cancel_24"
+            app:layout_constraintBottom_toBottomOf="@+id/headerUpdate"
+            app:layout_constraintEnd_toStartOf="@+id/doneEdit"
+            app:layout_constraintTop_toTopOf="@+id/headerUpdate"
+            android:id="@+id/closeEdit"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/baseline_done_24"
+            app:layout_constraintBottom_toBottomOf="@+id/headerUpdate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/headerUpdate"
+            android:id="@+id/doneEdit"/>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/editHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16sp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@color/sand"
+            app:cardCornerRadius="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/editHeaderBg"
+            app:layout_constraintBottom_toBottomOf="@+id/editHeaderBg"
+            android:backgroundTint="@color/sand">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14sp">
+
+                <TextView
+                    android:id="@+id/textEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Update Perjalanan!"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/editHeader"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:padding="16dp"
+            android:layout_marginTop="16sp">
+
+            <EditText
+                android:id="@+id/et_edt_asal"
+                style="@style/et_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Masukkan Stasiun Asal" />
+
+            <EditText
+                android:id="@+id/et_edt_tujuan"
+                style="@style/et_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Masukkan Stasiun Tujuan" />
+
+            <EditText
+                android:id="@+id/et_edt_kelas"
+                style="@style/et_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Masukkan Kelas Kereta" />
+
+            <EditText
+                android:id="@+id/et_edt_harga"
+                style="@style/et_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Masukkan Harga" />
+
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/edtDateTrip"
+                android:layout_marginBottom="16sp"
+                android:theme="@style/DatePickerTheme"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

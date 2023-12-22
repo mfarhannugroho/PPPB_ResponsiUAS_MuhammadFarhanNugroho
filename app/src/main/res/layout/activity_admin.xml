@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminActivity">
+
+    <View
+        android:id="@+id/viewHeaderBg"
+        android:layout_width="match_parent"
+        android:layout_height="165sp"
+        android:background="@color/green"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/headerDashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25sp"
+        android:layout_marginLeft="25sp"
+        android:layout_marginTop="25sp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Dashboard Admin"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/baseline_logout_24"
+        app:layout_constraintBottom_toBottomOf="@+id/headerDashboard"
+        app:layout_constraintEnd_toStartOf="@+id/btn_add"
+        app:layout_constraintTop_toTopOf="@+id/headerDashboard"
+        android:id="@+id/logoutAdmin"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25sp"
+        android:layout_marginRight="25sp"
+        android:src="@drawable/baseline_add_24"
+        app:tint="@color/green"
+        app:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/headerDashboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/headerDashboard"
+        android:id="@+id/btn_add"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardHeader"
+        android:layout_marginStart="16sp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewHeaderBg"
+        app:layout_constraintTop_toBottomOf="@+id/viewHeaderBg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="14sp">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textDashboard"
+                android:text="Buat Perjalanan Anda!"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutKota"
+                android:gravity="center"
+                android:layout_marginTop="12sp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textDashboard"
+                app:layout_constraintEnd_toStartOf="@+id/layoutProvinsi">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="28sp"
+                    android:layout_height="28sp"
+                    android:src="@drawable/baseline_train_24"/>
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4sp"
+                    android:text="Antar"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kota"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutProvinsi"
+                android:gravity="center"
+                android:layout_marginTop="12sp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@+id/layoutKota"
+                app:layout_constraintTop_toBottomOf="@+id/textDashboard"
+                app:layout_constraintEnd_toStartOf="@+id/layoutLokal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="28sp"
+                    android:layout_height="28sp"
+                    android:src="@drawable/baseline_train_24"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4sp"
+                    android:text="Antar"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Provinsi"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutLokal"
+                android:gravity="center"
+                android:layout_marginTop="12sp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@+id/layoutProvinsi"
+                app:layout_constraintTop_toBottomOf="@+id/textDashboard"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="28sp"
+                    android:layout_height="28sp"
+                    android:src="@drawable/baseline_train_24"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4sp"
+                    android:text="Kereta"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lokal"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardHeader"
+        tools:listitem="@layout/list_dashboard" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

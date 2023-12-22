@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "183237172141",
+    "project_id": "uasppapb-3e520",
+    "storage_bucket": "uasppapb-3e520.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183237172141:android:150d3cdaeb6dad7659df24",
+        "android_client_info": {
+          "package_name": "com.example.uascobacoba"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgXyZx5zoyry0RegKn477_dR49NbV3be0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

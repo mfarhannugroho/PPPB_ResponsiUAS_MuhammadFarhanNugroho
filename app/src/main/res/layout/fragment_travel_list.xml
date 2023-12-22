@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TravelListFragment">
+
+    <View
+        android:id="@+id/homeHeaderBg"
+        android:layout_width="match_parent"
+        android:layout_height="165sp"
+        android:background="@color/green"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/headerUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25sp"
+        android:layout_marginLeft="25sp"
+        android:layout_marginTop="25sp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Selamat Datang"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/baseline_favorite_24"
+        app:layout_constraintBottom_toBottomOf="@+id/headerUser"
+        app:layout_constraintEnd_toStartOf="@+id/logoutUser"
+        app:layout_constraintTop_toTopOf="@+id/headerUser"
+        android:id="@+id/favUser"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/baseline_logout_24"
+        app:layout_constraintBottom_toBottomOf="@+id/headerUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/headerUser"
+        android:id="@+id/logoutUser"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardHeaderUser"
+        android:layout_marginStart="16sp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/homeHeaderBg"
+        app:layout_constraintTop_toBottomOf="@+id/homeHeaderBg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="14sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textUser"
+                android:text="Travel Yang Tersedia"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutKotaUser"
+                android:gravity="center"
+                android:layout_marginTop="12sp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textUser"
+                app:layout_constraintEnd_toStartOf="@+id/layoutProvinsiUser">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="28sp"
+                    android:layout_height="28sp"
+                    android:src="@drawable/baseline_train_24"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4sp"
+                    android:text="Antar"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kota"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutProvinsiUser"
+                android:gravity="center"
+                android:layout_marginTop="12sp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@+id/layoutKotaUser"
+                app:layout_constraintTop_toBottomOf="@+id/textUser"
+                app:layout_constraintEnd_toStartOf="@+id/layoutLokalUser">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="28sp"
+                    android:layout_height="28sp"
+                    android:src="@drawable/baseline_train_24"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4sp"
+                    android:text="Antar"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Provinsi"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutLokalUser"
+                android:gravity="center"
+                android:layout_marginTop="12sp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@+id/layoutProvinsiUser"
+                app:layout_constraintTop_toBottomOf="@+id/textUser"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="28sp"
+                    android:layout_height="28sp"
+                    android:src="@drawable/baseline_train_24"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4sp"
+                    android:text="Kereta"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lokal"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardHeaderUser"
+        android:padding="14sp"
+        tools:listitem="@layout/list_user"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
